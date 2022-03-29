@@ -1,0 +1,207 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.todoContainer{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 3%;
+}
+
+.todoContainer .upperContainer{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todoContainer .upperContainer .task{
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.todoContainer .upperContainer .list{
+    margin-left: 15px;
+    font-size: 3.5rem;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    color: rgb(131, 130, 130);
+}
+
+.todoContainer .upperContainer .plus{
+    color: orangered;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.todoContainer .upperContainer .add{
+    font-size: 2.8rem;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    color: rgb(131, 130, 130);
+}
+
+.popUp{
+    width: 30%;
+    height: 30%;
+    margin-left: 35%;
+    margin-top: 18%;
+    border: 1.4px solid orangered;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 4px 4px 14px gray;
+    background-color: white;
+    outline: none;
+}
+
+.ReactModalPortal .ReactModal__Overlay, .ReactModal__Overlay--after-open{
+    
+    backdrop-filter: blur(2px);
+}
+
+.popUp .popupHeading{
+    font-size: 2.8rem;
+    letter-spacing: 0.5px;
+    color: orangered;
+}
+
+.popUp .input{
+    width: 80%;
+}
+
+.popUp .input input{
+    all: unset;
+    width: 100%;
+    height: 25px;
+    padding: 2px;
+    border: 1.4px solid orangered;
+    border-radius: 5px;
+    font-size: 1.8rem;
+    caret-color: orangered;
+}
+
+.popUp .input input:focus{
+    box-shadow: 2px 2px 5px gray;
+}
+
+.popUp button{
+    all: unset;
+    width: 20%;
+    height: 15%;
+    font-size: 1.8rem;
+    color: white;
+    text-align: center;
+    background-color: orangered;
+    border-radius: 18px;
+    letter-spacing: 0.6px;
+    padding: 3px;
+    cursor: pointer;
+    box-shadow: none;
+    transition: box-shadow 0.2s;
+}
+
+.popUp button:hover{
+    box-shadow: 4px 4px 8px gray;
+}
+
+.taskList{
+    list-style-type: none;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.taskList li{
+    border: 1.3px solid orangered;
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: rgb(85, 84, 84);
+    padding: 14px;
+    margin-top: 15px;
+    border-radius: 8px;
+    width: 80%;
+    box-shadow: 1.5px 1.5px 6px rgb(161, 161, 161);
+    transition: box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.taskList li:hover{
+    box-shadow: 5px 5px 9px rgb(150, 150, 150);
+    text-decoration: line-through;
+}
+
+.todoContainer .clearAll{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.clearHide{
+    display: none;
+}
+
+.clearAll button{
+    all: unset;
+    width: 14%;
+    font-size: 1.8rem;
+    color: white;
+    text-align: center;
+    background-color: orangered;
+    border-radius: 18px;
+    letter-spacing: 0.6px;
+    padding: 5px;
+    cursor: pointer;
+    box-shadow: none;
+    transition: box-shadow 0.2s;
+}
+
+.clearAll button:hover{
+    box-shadow: 4px 4px 8px gray;
+}
+
+
+
+/* styling for mobile view  */
+
+
+@media (max-width: 700px) {
+    .todoContainer{
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 3%;
+    }
+
+    .todoContainer .add{
+        display: none;
+    }
+
+    .popUp{
+        width: 90%;
+        height: 190px;
+        margin-left: 5%;
+        margin-top: 55%;
+    }
+
+    .taskList li{
+        font-size: 2rem;
+    }
+
+    .clearAll button{
+        width: 30%;
+    }
+
+    .taskList li:hover{
+        box-shadow: 1.5px 1.5px 6px rgb(161, 161, 161);
+        text-decoration: none;
+    }
+}
